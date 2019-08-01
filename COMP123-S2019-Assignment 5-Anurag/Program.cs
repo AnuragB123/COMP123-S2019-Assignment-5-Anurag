@@ -9,8 +9,13 @@ namespace COMP123_S2019_Assignment_5_Anurag
     public static class Program
     {
         public static SplashScreenForm splashScreenForm;
+
         public static StartForm startForm;
+
         public static SelectForm selectForm;
+
+        public static ProductInfoForm productInfoForm;
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -25,6 +30,8 @@ namespace COMP123_S2019_Assignment_5_Anurag
             startForm = new StartForm();
 
             selectForm = new SelectForm();
+
+            productInfoForm = new ProductInfoForm();
 
             Application.Run(new SplashScreenForm());
         }

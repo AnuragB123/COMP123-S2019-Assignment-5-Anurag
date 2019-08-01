@@ -10,21 +10,21 @@ using System.Windows.Forms;
 
 namespace COMP123_S2019_Assignment_5_Anurag
 {
-    public partial class SelectForm : Form
+    public partial class ProductInfoForm : Form
     {
-        public SelectForm()
+        public ProductInfoForm()
         {
             InitializeComponent();
         }
 
-        private void CancelButton_Click(object sender, EventArgs e)
+        private void Application_Exit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void NextButton_Click(object sender, EventArgs e)
+        private void Select_Another_Product_Click(object sender, EventArgs e)
         {
-            Program.productInfoForm.Show();
+            Program.selectForm.Show();
             this.Hide();
         }
     }
