@@ -10,22 +10,16 @@ using System.Windows.Forms;
 
 namespace COMP123_S2019_Assignment_5_Anurag
 {
-    public partial class StartForm : Form
+    public partial class SelectForm : Form
     {
-        public StartForm()
+        public SelectForm()
         {
             InitializeComponent();
         }
 
-        private void ExitButton_Click(object sender, EventArgs e)
+        private void CancelButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        }
-
-        private void StartNewOrderButton_Click(object sender, EventArgs e)
-        {
-            Program.selectForm.Show();
-            this.Hide();
         }
     }
 }
