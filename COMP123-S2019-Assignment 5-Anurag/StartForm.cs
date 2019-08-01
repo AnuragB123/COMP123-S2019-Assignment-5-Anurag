@@ -16,5 +16,10 @@ namespace COMP123_S2019_Assignment_5_Anurag
         {
             InitializeComponent();
         }
+
+        private void ExitButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
