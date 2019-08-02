@@ -49,8 +49,14 @@ namespace COMP123_S2019_Assignment_5_Anurag
         {
             // TODO: This line of code loads data into the 'dollarComputersDataSet.products' table. You can move, or remove it, as needed.
             this.productsTableAdapter.Fill(this.dollarComputersDataSet.products);
-            // TODO: This line of code loads data into the 'dollarComputersDataSet.products' table. You can move, or remove it, as needed.
 
+
+        }
+
+        private void ComputersDataGridView_SelectionChanged(object sender, EventArgs e)
+        {
+            //local variables that are used as alias
+           
         }
     }
 }

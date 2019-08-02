@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridView ComputersDataGridView;
             this.TypeOfComputerLabel = new System.Windows.Forms.Label();
             this.YourSelectionLabel = new System.Windows.Forms.Label();
             this.YourSelectionTextBox = new System.Windows.Forms.TextBox();
             this.CancelButton = new System.Windows.Forms.Button();
             this.NextButton = new System.Windows.Forms.Button();
+            this.ProductsDataGridView = new System.Windows.Forms.DataGridView();
             this.dollarComputersDataSet = new COMP123_S2019_Assignment_5_Anurag.DollarComputersDataSet();
             this.productsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.productsTableAdapter = new COMP123_S2019_Assignment_5_Anurag.DollarComputersDataSetTableAdapters.productsTableAdapter();
@@ -69,8 +69,7 @@
             this.mousttypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.powerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.webcamDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ComputersDataGridView = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(ComputersDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProductsDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dollarComputersDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -79,23 +78,63 @@
             // 
             this.TypeOfComputerLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TypeOfComputerLabel.Location = new System.Drawing.Point(4, 1);
-            this.TypeOfComputerLabel.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.TypeOfComputerLabel.Margin = new System.Windows.Forms.Padding(0);
             this.TypeOfComputerLabel.Name = "TypeOfComputerLabel";
             this.TypeOfComputerLabel.Size = new System.Drawing.Size(132, 13);
             this.TypeOfComputerLabel.TabIndex = 0;
             this.TypeOfComputerLabel.Text = "Dollar Computer Hardware List";
             // 
-            // ComputersDataGridView
+            // YourSelectionLabel
             // 
-            ComputersDataGridView.AllowUserToAddRows = false;
-            ComputersDataGridView.AllowUserToDeleteRows = false;
-            ComputersDataGridView.AllowUserToResizeColumns = false;
-            ComputersDataGridView.AllowUserToResizeRows = false;
-            ComputersDataGridView.AutoGenerateColumns = false;
-            ComputersDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            ComputersDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
-            ComputersDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            ComputersDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.YourSelectionLabel.Location = new System.Drawing.Point(13, 577);
+            this.YourSelectionLabel.Margin = new System.Windows.Forms.Padding(0);
+            this.YourSelectionLabel.Name = "YourSelectionLabel";
+            this.YourSelectionLabel.Size = new System.Drawing.Size(69, 11);
+            this.YourSelectionLabel.TabIndex = 2;
+            this.YourSelectionLabel.Text = "Your Selection:";
+            // 
+            // YourSelectionTextBox
+            // 
+            this.YourSelectionTextBox.Location = new System.Drawing.Point(103, 577);
+            this.YourSelectionTextBox.Margin = new System.Windows.Forms.Padding(0);
+            this.YourSelectionTextBox.Name = "YourSelectionTextBox";
+            this.YourSelectionTextBox.ReadOnly = true;
+            this.YourSelectionTextBox.Size = new System.Drawing.Size(155, 17);
+            this.YourSelectionTextBox.TabIndex = 3;
+            // 
+            // CancelButton
+            // 
+            this.CancelButton.Location = new System.Drawing.Point(266, 573);
+            this.CancelButton.Margin = new System.Windows.Forms.Padding(0);
+            this.CancelButton.Name = "CancelButton";
+            this.CancelButton.Size = new System.Drawing.Size(110, 20);
+            this.CancelButton.TabIndex = 4;
+            this.CancelButton.Text = "Cancel";
+            this.CancelButton.UseVisualStyleBackColor = true;
+            this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
+            // 
+            // NextButton
+            // 
+            this.NextButton.Location = new System.Drawing.Point(386, 573);
+            this.NextButton.Margin = new System.Windows.Forms.Padding(0);
+            this.NextButton.Name = "NextButton";
+            this.NextButton.Size = new System.Drawing.Size(110, 20);
+            this.NextButton.TabIndex = 5;
+            this.NextButton.Text = "Next";
+            this.NextButton.UseVisualStyleBackColor = true;
+            this.NextButton.Click += new System.EventHandler(this.NextButton_Click);
+            // 
+            // ProductsDataGridView
+            // 
+            this.ProductsDataGridView.AllowUserToAddRows = false;
+            this.ProductsDataGridView.AllowUserToDeleteRows = false;
+            this.ProductsDataGridView.AllowUserToResizeColumns = false;
+            this.ProductsDataGridView.AllowUserToResizeRows = false;
+            this.ProductsDataGridView.AutoGenerateColumns = false;
+            this.ProductsDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.ProductsDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.ProductsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ProductsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.productIDDataGridViewTextBoxColumn,
             this.costDataGridViewTextBoxColumn,
             this.manufacturerDataGridViewTextBoxColumn,
@@ -127,55 +166,14 @@
             this.mousttypeDataGridViewTextBoxColumn,
             this.powerDataGridViewTextBoxColumn,
             this.webcamDataGridViewTextBoxColumn});
-            ComputersDataGridView.DataSource = this.productsBindingSource;
-            ComputersDataGridView.Location = new System.Drawing.Point(6, 13);
-            ComputersDataGridView.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
-            ComputersDataGridView.Name = "ComputersDataGridView";
-            ComputersDataGridView.ReadOnly = true;
-            ComputersDataGridView.RowTemplate.Height = 24;
-            ComputersDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            ComputersDataGridView.Size = new System.Drawing.Size(1469, 540);
-            ComputersDataGridView.TabIndex = 1;
-            // 
-            // YourSelectionLabel
-            // 
-            this.YourSelectionLabel.Location = new System.Drawing.Point(13, 577);
-            this.YourSelectionLabel.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
-            this.YourSelectionLabel.Name = "YourSelectionLabel";
-            this.YourSelectionLabel.Size = new System.Drawing.Size(69, 11);
-            this.YourSelectionLabel.TabIndex = 2;
-            this.YourSelectionLabel.Text = "Your Selection:";
-            // 
-            // YourSelectionTextBox
-            // 
-            this.YourSelectionTextBox.Location = new System.Drawing.Point(103, 577);
-            this.YourSelectionTextBox.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
-            this.YourSelectionTextBox.Name = "YourSelectionTextBox";
-            this.YourSelectionTextBox.ReadOnly = true;
-            this.YourSelectionTextBox.Size = new System.Drawing.Size(155, 17);
-            this.YourSelectionTextBox.TabIndex = 3;
-            // 
-            // CancelButton
-            // 
-            this.CancelButton.Location = new System.Drawing.Point(266, 573);
-            this.CancelButton.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
-            this.CancelButton.Name = "CancelButton";
-            this.CancelButton.Size = new System.Drawing.Size(110, 20);
-            this.CancelButton.TabIndex = 4;
-            this.CancelButton.Text = "Cancel";
-            this.CancelButton.UseVisualStyleBackColor = true;
-            this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
-            // 
-            // NextButton
-            // 
-            this.NextButton.Location = new System.Drawing.Point(386, 573);
-            this.NextButton.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
-            this.NextButton.Name = "NextButton";
-            this.NextButton.Size = new System.Drawing.Size(110, 20);
-            this.NextButton.TabIndex = 5;
-            this.NextButton.Text = "Next";
-            this.NextButton.UseVisualStyleBackColor = true;
-            this.NextButton.Click += new System.EventHandler(this.NextButton_Click);
+            this.ProductsDataGridView.DataSource = this.productsBindingSource;
+            this.ProductsDataGridView.Location = new System.Drawing.Point(4, 18);
+            this.ProductsDataGridView.Name = "ProductsDataGridView";
+            this.ProductsDataGridView.ReadOnly = true;
+            this.ProductsDataGridView.RowTemplate.Height = 24;
+            this.ProductsDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.ProductsDataGridView.Size = new System.Drawing.Size(1470, 537);
+            this.ProductsDataGridView.TabIndex = 6;
             // 
             // dollarComputersDataSet
             // 
@@ -197,6 +195,7 @@
             this.productIDDataGridViewTextBoxColumn.HeaderText = "productID";
             this.productIDDataGridViewTextBoxColumn.Name = "productIDDataGridViewTextBoxColumn";
             this.productIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.productIDDataGridViewTextBoxColumn.Width = 75;
             // 
             // costDataGridViewTextBoxColumn
             // 
@@ -204,6 +203,7 @@
             this.costDataGridViewTextBoxColumn.HeaderText = "cost";
             this.costDataGridViewTextBoxColumn.Name = "costDataGridViewTextBoxColumn";
             this.costDataGridViewTextBoxColumn.ReadOnly = true;
+            this.costDataGridViewTextBoxColumn.Width = 52;
             // 
             // manufacturerDataGridViewTextBoxColumn
             // 
@@ -211,6 +211,7 @@
             this.manufacturerDataGridViewTextBoxColumn.HeaderText = "manufacturer";
             this.manufacturerDataGridViewTextBoxColumn.Name = "manufacturerDataGridViewTextBoxColumn";
             this.manufacturerDataGridViewTextBoxColumn.ReadOnly = true;
+            this.manufacturerDataGridViewTextBoxColumn.Width = 89;
             // 
             // modelDataGridViewTextBoxColumn
             // 
@@ -218,6 +219,7 @@
             this.modelDataGridViewTextBoxColumn.HeaderText = "model";
             this.modelDataGridViewTextBoxColumn.Name = "modelDataGridViewTextBoxColumn";
             this.modelDataGridViewTextBoxColumn.ReadOnly = true;
+            this.modelDataGridViewTextBoxColumn.Width = 59;
             // 
             // rAMtypeDataGridViewTextBoxColumn
             // 
@@ -225,6 +227,7 @@
             this.rAMtypeDataGridViewTextBoxColumn.HeaderText = "RAM_type";
             this.rAMtypeDataGridViewTextBoxColumn.Name = "rAMtypeDataGridViewTextBoxColumn";
             this.rAMtypeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.rAMtypeDataGridViewTextBoxColumn.Width = 80;
             // 
             // rAMsizeDataGridViewTextBoxColumn
             // 
@@ -232,6 +235,7 @@
             this.rAMsizeDataGridViewTextBoxColumn.HeaderText = "RAM_size";
             this.rAMsizeDataGridViewTextBoxColumn.Name = "rAMsizeDataGridViewTextBoxColumn";
             this.rAMsizeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.rAMsizeDataGridViewTextBoxColumn.Width = 79;
             // 
             // displaytypeDataGridViewTextBoxColumn
             // 
@@ -239,6 +243,7 @@
             this.displaytypeDataGridViewTextBoxColumn.HeaderText = "displaytype";
             this.displaytypeDataGridViewTextBoxColumn.Name = "displaytypeDataGridViewTextBoxColumn";
             this.displaytypeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.displaytypeDataGridViewTextBoxColumn.Width = 81;
             // 
             // screensizeDataGridViewTextBoxColumn
             // 
@@ -246,6 +251,7 @@
             this.screensizeDataGridViewTextBoxColumn.HeaderText = "screensize";
             this.screensizeDataGridViewTextBoxColumn.Name = "screensizeDataGridViewTextBoxColumn";
             this.screensizeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.screensizeDataGridViewTextBoxColumn.Width = 79;
             // 
             // resolutionDataGridViewTextBoxColumn
             // 
@@ -253,6 +259,7 @@
             this.resolutionDataGridViewTextBoxColumn.HeaderText = "resolution";
             this.resolutionDataGridViewTextBoxColumn.Name = "resolutionDataGridViewTextBoxColumn";
             this.resolutionDataGridViewTextBoxColumn.ReadOnly = true;
+            this.resolutionDataGridViewTextBoxColumn.Width = 74;
             // 
             // cPUClassDataGridViewTextBoxColumn
             // 
@@ -260,6 +267,7 @@
             this.cPUClassDataGridViewTextBoxColumn.HeaderText = "CPU_Class";
             this.cPUClassDataGridViewTextBoxColumn.Name = "cPUClassDataGridViewTextBoxColumn";
             this.cPUClassDataGridViewTextBoxColumn.ReadOnly = true;
+            this.cPUClassDataGridViewTextBoxColumn.Width = 83;
             // 
             // cPUbrandDataGridViewTextBoxColumn
             // 
@@ -267,6 +275,7 @@
             this.cPUbrandDataGridViewTextBoxColumn.HeaderText = "CPU_brand";
             this.cPUbrandDataGridViewTextBoxColumn.Name = "cPUbrandDataGridViewTextBoxColumn";
             this.cPUbrandDataGridViewTextBoxColumn.ReadOnly = true;
+            this.cPUbrandDataGridViewTextBoxColumn.Width = 82;
             // 
             // cPUtypeDataGridViewTextBoxColumn
             // 
@@ -274,6 +283,7 @@
             this.cPUtypeDataGridViewTextBoxColumn.HeaderText = "CPU_type";
             this.cPUtypeDataGridViewTextBoxColumn.Name = "cPUtypeDataGridViewTextBoxColumn";
             this.cPUtypeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.cPUtypeDataGridViewTextBoxColumn.Width = 77;
             // 
             // cPUspeedDataGridViewTextBoxColumn
             // 
@@ -281,6 +291,7 @@
             this.cPUspeedDataGridViewTextBoxColumn.HeaderText = "CPU_speed";
             this.cPUspeedDataGridViewTextBoxColumn.Name = "cPUspeedDataGridViewTextBoxColumn";
             this.cPUspeedDataGridViewTextBoxColumn.ReadOnly = true;
+            this.cPUspeedDataGridViewTextBoxColumn.Width = 84;
             // 
             // cPUnumberDataGridViewTextBoxColumn
             // 
@@ -288,6 +299,7 @@
             this.cPUnumberDataGridViewTextBoxColumn.HeaderText = "CPU_number";
             this.cPUnumberDataGridViewTextBoxColumn.Name = "cPUnumberDataGridViewTextBoxColumn";
             this.cPUnumberDataGridViewTextBoxColumn.ReadOnly = true;
+            this.cPUnumberDataGridViewTextBoxColumn.Width = 90;
             // 
             // conditionDataGridViewTextBoxColumn
             // 
@@ -295,6 +307,7 @@
             this.conditionDataGridViewTextBoxColumn.HeaderText = "condition";
             this.conditionDataGridViewTextBoxColumn.Name = "conditionDataGridViewTextBoxColumn";
             this.conditionDataGridViewTextBoxColumn.ReadOnly = true;
+            this.conditionDataGridViewTextBoxColumn.Width = 71;
             // 
             // oSDataGridViewTextBoxColumn
             // 
@@ -302,6 +315,7 @@
             this.oSDataGridViewTextBoxColumn.HeaderText = "OS";
             this.oSDataGridViewTextBoxColumn.Name = "oSDataGridViewTextBoxColumn";
             this.oSDataGridViewTextBoxColumn.ReadOnly = true;
+            this.oSDataGridViewTextBoxColumn.Width = 47;
             // 
             // platformDataGridViewTextBoxColumn
             // 
@@ -309,6 +323,7 @@
             this.platformDataGridViewTextBoxColumn.HeaderText = "platform";
             this.platformDataGridViewTextBoxColumn.Name = "platformDataGridViewTextBoxColumn";
             this.platformDataGridViewTextBoxColumn.ReadOnly = true;
+            this.platformDataGridViewTextBoxColumn.Width = 68;
             // 
             // hDDsizeDataGridViewTextBoxColumn
             // 
@@ -316,6 +331,7 @@
             this.hDDsizeDataGridViewTextBoxColumn.HeaderText = "HDD_size";
             this.hDDsizeDataGridViewTextBoxColumn.Name = "hDDsizeDataGridViewTextBoxColumn";
             this.hDDsizeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.hDDsizeDataGridViewTextBoxColumn.Width = 77;
             // 
             // hDDspeedDataGridViewTextBoxColumn
             // 
@@ -323,6 +339,7 @@
             this.hDDspeedDataGridViewTextBoxColumn.HeaderText = "HDD_speed";
             this.hDDspeedDataGridViewTextBoxColumn.Name = "hDDspeedDataGridViewTextBoxColumn";
             this.hDDspeedDataGridViewTextBoxColumn.ReadOnly = true;
+            this.hDDspeedDataGridViewTextBoxColumn.Width = 85;
             // 
             // gPUTypeDataGridViewTextBoxColumn
             // 
@@ -330,6 +347,7 @@
             this.gPUTypeDataGridViewTextBoxColumn.HeaderText = "GPU_Type";
             this.gPUTypeDataGridViewTextBoxColumn.Name = "gPUTypeDataGridViewTextBoxColumn";
             this.gPUTypeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.gPUTypeDataGridViewTextBoxColumn.Width = 79;
             // 
             // opticaldriveDataGridViewTextBoxColumn
             // 
@@ -337,6 +355,7 @@
             this.opticaldriveDataGridViewTextBoxColumn.HeaderText = "optical_drive";
             this.opticaldriveDataGridViewTextBoxColumn.Name = "opticaldriveDataGridViewTextBoxColumn";
             this.opticaldriveDataGridViewTextBoxColumn.ReadOnly = true;
+            this.opticaldriveDataGridViewTextBoxColumn.Width = 87;
             // 
             // audiotypeDataGridViewTextBoxColumn
             // 
@@ -344,6 +363,7 @@
             this.audiotypeDataGridViewTextBoxColumn.HeaderText = "Audio_type";
             this.audiotypeDataGridViewTextBoxColumn.Name = "audiotypeDataGridViewTextBoxColumn";
             this.audiotypeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.audiotypeDataGridViewTextBoxColumn.Width = 81;
             // 
             // lANDataGridViewTextBoxColumn
             // 
@@ -351,6 +371,7 @@
             this.lANDataGridViewTextBoxColumn.HeaderText = "LAN";
             this.lANDataGridViewTextBoxColumn.Name = "lANDataGridViewTextBoxColumn";
             this.lANDataGridViewTextBoxColumn.ReadOnly = true;
+            this.lANDataGridViewTextBoxColumn.Width = 53;
             // 
             // wIFIDataGridViewTextBoxColumn
             // 
@@ -358,6 +379,7 @@
             this.wIFIDataGridViewTextBoxColumn.HeaderText = "WIFI";
             this.wIFIDataGridViewTextBoxColumn.Name = "wIFIDataGridViewTextBoxColumn";
             this.wIFIDataGridViewTextBoxColumn.ReadOnly = true;
+            this.wIFIDataGridViewTextBoxColumn.Width = 55;
             // 
             // widthDataGridViewTextBoxColumn
             // 
@@ -365,6 +387,7 @@
             this.widthDataGridViewTextBoxColumn.HeaderText = "width";
             this.widthDataGridViewTextBoxColumn.Name = "widthDataGridViewTextBoxColumn";
             this.widthDataGridViewTextBoxColumn.ReadOnly = true;
+            this.widthDataGridViewTextBoxColumn.Width = 57;
             // 
             // heightDataGridViewTextBoxColumn
             // 
@@ -372,6 +395,7 @@
             this.heightDataGridViewTextBoxColumn.HeaderText = "height";
             this.heightDataGridViewTextBoxColumn.Name = "heightDataGridViewTextBoxColumn";
             this.heightDataGridViewTextBoxColumn.ReadOnly = true;
+            this.heightDataGridViewTextBoxColumn.Width = 59;
             // 
             // depthDataGridViewTextBoxColumn
             // 
@@ -379,6 +403,7 @@
             this.depthDataGridViewTextBoxColumn.HeaderText = "depth";
             this.depthDataGridViewTextBoxColumn.Name = "depthDataGridViewTextBoxColumn";
             this.depthDataGridViewTextBoxColumn.ReadOnly = true;
+            this.depthDataGridViewTextBoxColumn.Width = 57;
             // 
             // weightDataGridViewTextBoxColumn
             // 
@@ -386,6 +411,7 @@
             this.weightDataGridViewTextBoxColumn.HeaderText = "weight";
             this.weightDataGridViewTextBoxColumn.Name = "weightDataGridViewTextBoxColumn";
             this.weightDataGridViewTextBoxColumn.ReadOnly = true;
+            this.weightDataGridViewTextBoxColumn.Width = 62;
             // 
             // mousttypeDataGridViewTextBoxColumn
             // 
@@ -393,6 +419,7 @@
             this.mousttypeDataGridViewTextBoxColumn.HeaderText = "moust_type";
             this.mousttypeDataGridViewTextBoxColumn.Name = "mousttypeDataGridViewTextBoxColumn";
             this.mousttypeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.mousttypeDataGridViewTextBoxColumn.Width = 83;
             // 
             // powerDataGridViewTextBoxColumn
             // 
@@ -400,6 +427,7 @@
             this.powerDataGridViewTextBoxColumn.HeaderText = "power";
             this.powerDataGridViewTextBoxColumn.Name = "powerDataGridViewTextBoxColumn";
             this.powerDataGridViewTextBoxColumn.ReadOnly = true;
+            this.powerDataGridViewTextBoxColumn.Width = 60;
             // 
             // webcamDataGridViewTextBoxColumn
             // 
@@ -407,6 +435,7 @@
             this.webcamDataGridViewTextBoxColumn.HeaderText = "webcam";
             this.webcamDataGridViewTextBoxColumn.Name = "webcamDataGridViewTextBoxColumn";
             this.webcamDataGridViewTextBoxColumn.ReadOnly = true;
+            this.webcamDataGridViewTextBoxColumn.Width = 70;
             // 
             // SelectForm
             // 
@@ -414,19 +443,19 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1486, 603);
             this.ControlBox = false;
+            this.Controls.Add(this.ProductsDataGridView);
             this.Controls.Add(this.NextButton);
             this.Controls.Add(this.CancelButton);
             this.Controls.Add(this.YourSelectionTextBox);
             this.Controls.Add(this.YourSelectionLabel);
-            this.Controls.Add(ComputersDataGridView);
             this.Controls.Add(this.TypeOfComputerLabel);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.Margin = new System.Windows.Forms.Padding(1);
             this.Name = "SelectForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Select Your Computer";
             this.Load += new System.EventHandler(this.SelectForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(ComputersDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProductsDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dollarComputersDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -441,6 +470,7 @@
         private System.Windows.Forms.TextBox YourSelectionTextBox;
         private System.Windows.Forms.Button CancelButton;
         private System.Windows.Forms.Button NextButton;
+        private System.Windows.Forms.DataGridView ProductsDataGridView;
         private DollarComputersDataSet dollarComputersDataSet;
         private System.Windows.Forms.BindingSource productsBindingSource;
         private DollarComputersDataSetTableAdapters.productsTableAdapter productsTableAdapter;
