@@ -28,6 +28,10 @@ namespace COMP123_S2019_Assignment_5_Anurag
             this.Hide();
         }
 
-       
+        private void NextButton_Click(object sender, EventArgs e)
+        {
+            Program.orderForm.Show();
+            this.Hide();
+        }
     }
 }
