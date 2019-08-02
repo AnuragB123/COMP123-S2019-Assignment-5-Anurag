@@ -16,5 +16,21 @@ namespace COMP123_S2019_Assignment_5_Anurag
         {
             InitializeComponent();
         }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Program.aboutForm.Show();
+        }
+
+        private void Go_Back_To_Product_Click(object sender, EventArgs e)
+        {
+            Program.productInfoForm.Show();
+            this.Hide();
+        }
+
+        private void Terminate_Application_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
