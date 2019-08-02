@@ -44,5 +44,13 @@ namespace COMP123_S2019_Assignment_5_Anurag
             Program.productInfoForm.Show();
             this.Hide();
         }
+
+        private void SelectForm_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'dollarComputersDataSet.products' table. You can move, or remove it, as needed.
+            this.productsTableAdapter.Fill(this.dollarComputersDataSet.products);
+            // TODO: This line of code loads data into the 'dollarComputersDataSet.products' table. You can move, or remove it, as needed.
+
+        }
     }
 }
