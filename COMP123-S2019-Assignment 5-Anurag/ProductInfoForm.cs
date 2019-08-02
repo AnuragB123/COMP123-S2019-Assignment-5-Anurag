@@ -30,7 +30,7 @@ namespace COMP123_S2019_Assignment_5_Anurag
 
         private void NextButton_Click(object sender, EventArgs e)
         {
-            Program.orderForm.Show();
+            //Program.orderForm.Show();
             this.Hide();
         }
     }

@@ -16,7 +16,8 @@ namespace COMP123_S2019_Assignment_5_Anurag
 
         public static ProductInfoForm productInfoForm;
 
-        public static OrderForm orderForm;
+        
+
 
         /// <summary>
         /// The main entry point for the application.
@@ -35,7 +36,9 @@ namespace COMP123_S2019_Assignment_5_Anurag
 
             productInfoForm = new ProductInfoForm();
 
-            orderForm = new OrderForm();
+            //orderForm = new OrderForm();
+
+            //aboutForm = new AboutForm();
 
             Application.Run(new SplashScreenForm());
         }
