@@ -16,6 +16,10 @@ namespace COMP123_S2019_Assignment_5_Anurag
 
         public static ProductInfoForm productInfoForm;
 
+        public static OrderForm orderForm;
+
+        public static AboutForm aboutForm;
+
         
 
 
@@ -36,7 +40,9 @@ namespace COMP123_S2019_Assignment_5_Anurag
 
             productInfoForm = new ProductInfoForm();
 
-            //orderForm = new OrderForm();
+            orderForm = new OrderForm();
+
+            aboutForm = new AboutForm();
 
             //aboutForm = new AboutForm();
 
