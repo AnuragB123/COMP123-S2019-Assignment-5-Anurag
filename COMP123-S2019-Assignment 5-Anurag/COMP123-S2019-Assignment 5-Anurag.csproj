@@ -90,6 +90,9 @@
     <EmbeddedResource Include="AboutForm.resx">
       <DependentUpon>AboutForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="OrderForm.resx">
+      <DependentUpon>OrderForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ProductInfoForm.resx">
       <DependentUpon>ProductInfoForm.cs</DependentUpon>
     </EmbeddedResource>
