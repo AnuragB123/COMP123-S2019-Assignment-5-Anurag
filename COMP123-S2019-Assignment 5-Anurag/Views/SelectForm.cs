@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using COMP123_S2019_Assignment_5_Anurag.Data;
 /// <summary>
 /// Name: Anurag Bhattacharya
 /// Lab 12 - Assignment 5 UI
@@ -56,7 +57,24 @@ namespace COMP123_S2019_Assignment_5_Anurag
         private void ComputersDataGridView_SelectionChanged(object sender, EventArgs e)
         {
             //local variables that are used as alias
-           
+            var currentCell = ProductsDataGridView.CurrentCell;
+            var rowIndex = ProductsDataGridView.CurrentCell.RowIndex;
+            var currentRow = ProductsDataGridView.Rows[rowIndex];
+            var columnCount = ProductsDataGridView.ColumnCount;
+            var cells = currentRow.Cells;
+
+            currentRow.Selected = true;
+
+            string outputString = string.Empty;
+
+            for (int index = 1; index < 4; index++)
+            {
+                outputString += cells[index].Value + " ";
+            }
+
+            YourSelectionTextBox.Text = outputString;
+
+
         }
     }
 }
