@@ -20,6 +20,7 @@ namespace COMP123_S2019_Assignment_5_Anurag
         public static ProductInfoForm productInfoForm;
         public static OrderForm orderForm;
         public static AboutForm aboutForm;
+        public static Product product;
 
         /// <summary>
         /// The main entry point for the application.
@@ -36,6 +37,7 @@ namespace COMP123_S2019_Assignment_5_Anurag
             productInfoForm = new ProductInfoForm();
             orderForm = new OrderForm();
             aboutForm = new AboutForm();
+            product = new Product();
             //Runs the Splash Screen First
             Application.Run(new SplashScreenForm());
         }

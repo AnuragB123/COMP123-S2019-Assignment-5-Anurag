@@ -55,5 +55,10 @@ namespace COMP123_S2019_Assignment_5_Anurag
         {
             Application.Exit();
         }
+
+        private void printToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Your Selection is printing!");
+        }
     }
 }

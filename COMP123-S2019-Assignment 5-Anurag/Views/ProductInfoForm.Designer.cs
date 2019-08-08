@@ -57,6 +57,14 @@
             this.PlatformDataLabel = new System.Windows.Forms.Label();
             this.PlatformLabel = new System.Windows.Forms.Label();
             this.SpecificationsGroupBox = new System.Windows.Forms.GroupBox();
+            this.WebcamDataLabel = new System.Windows.Forms.Label();
+            this.WebcamLabel = new System.Windows.Forms.Label();
+            this.GPUTypeDataLabel = new System.Windows.Forms.Label();
+            this.GPUTypeLabel = new System.Windows.Forms.Label();
+            this.HDDDataLabel = new System.Windows.Forms.Label();
+            this.HDDLabel = new System.Windows.Forms.Label();
+            this.CPUSpeedDataLabel = new System.Windows.Forms.Label();
+            this.CPUSpeedLabel = new System.Windows.Forms.Label();
             this.CPUTypeDataLabel = new System.Windows.Forms.Label();
             this.CPUNumberDataLabel = new System.Windows.Forms.Label();
             this.CPUTypeLabel = new System.Windows.Forms.Label();
@@ -67,14 +75,8 @@
             this.CPUBrandLabel = new System.Windows.Forms.Label();
             this.MemoryDataLabel = new System.Windows.Forms.Label();
             this.MemoryLabel = new System.Windows.Forms.Label();
-            this.CPUSpeedDataLabel = new System.Windows.Forms.Label();
-            this.CPUSpeedLabel = new System.Windows.Forms.Label();
-            this.HDDDataLabel = new System.Windows.Forms.Label();
-            this.HDDLabel = new System.Windows.Forms.Label();
-            this.GPUTypeDataLabel = new System.Windows.Forms.Label();
-            this.GPUTypeLabel = new System.Windows.Forms.Label();
-            this.WebcamDataLabel = new System.Windows.Forms.Label();
-            this.WebcamLabel = new System.Windows.Forms.Label();
+            this.ProductOpenFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.ProductSaveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.ProductInfoFormMenuStrip.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SpecificationsGroupBox.SuspendLayout();
@@ -111,13 +113,13 @@
             this.openToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
             this.openToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(173, 26);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.openToolStripMenuItem.Text = "&Open";
             // 
             // toolStripSeparator
             // 
             this.toolStripSeparator.Name = "toolStripSeparator";
-            this.toolStripSeparator.Size = new System.Drawing.Size(170, 6);
+            this.toolStripSeparator.Size = new System.Drawing.Size(213, 6);
             // 
             // saveToolStripMenuItem
             // 
@@ -125,18 +127,19 @@
             this.saveToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
             this.saveToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(173, 26);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.saveToolStripMenuItem.Text = "&Save";
+            this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(170, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(213, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(173, 26);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.exitToolStripMenuItem.Text = "E&xit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.Application_Exit_Click);
             // 
@@ -350,6 +353,74 @@
             this.SpecificationsGroupBox.TabStop = false;
             this.SpecificationsGroupBox.Text = "Specifications";
             // 
+            // WebcamDataLabel
+            // 
+            this.WebcamDataLabel.BackColor = System.Drawing.Color.White;
+            this.WebcamDataLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.WebcamDataLabel.Location = new System.Drawing.Point(800, 219);
+            this.WebcamDataLabel.Name = "WebcamDataLabel";
+            this.WebcamDataLabel.Size = new System.Drawing.Size(142, 31);
+            this.WebcamDataLabel.TabIndex = 23;
+            // 
+            // WebcamLabel
+            // 
+            this.WebcamLabel.Location = new System.Drawing.Point(652, 219);
+            this.WebcamLabel.Name = "WebcamLabel";
+            this.WebcamLabel.Size = new System.Drawing.Size(142, 31);
+            this.WebcamLabel.TabIndex = 24;
+            this.WebcamLabel.Text = "Webcam:";
+            // 
+            // GPUTypeDataLabel
+            // 
+            this.GPUTypeDataLabel.BackColor = System.Drawing.Color.White;
+            this.GPUTypeDataLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.GPUTypeDataLabel.Location = new System.Drawing.Point(800, 128);
+            this.GPUTypeDataLabel.Name = "GPUTypeDataLabel";
+            this.GPUTypeDataLabel.Size = new System.Drawing.Size(142, 31);
+            this.GPUTypeDataLabel.TabIndex = 21;
+            // 
+            // GPUTypeLabel
+            // 
+            this.GPUTypeLabel.Location = new System.Drawing.Point(652, 128);
+            this.GPUTypeLabel.Name = "GPUTypeLabel";
+            this.GPUTypeLabel.Size = new System.Drawing.Size(142, 31);
+            this.GPUTypeLabel.TabIndex = 22;
+            this.GPUTypeLabel.Text = "GPU Type:";
+            // 
+            // HDDDataLabel
+            // 
+            this.HDDDataLabel.BackColor = System.Drawing.Color.White;
+            this.HDDDataLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.HDDDataLabel.Location = new System.Drawing.Point(800, 37);
+            this.HDDDataLabel.Name = "HDDDataLabel";
+            this.HDDDataLabel.Size = new System.Drawing.Size(142, 31);
+            this.HDDDataLabel.TabIndex = 19;
+            // 
+            // HDDLabel
+            // 
+            this.HDDLabel.Location = new System.Drawing.Point(652, 37);
+            this.HDDLabel.Name = "HDDLabel";
+            this.HDDLabel.Size = new System.Drawing.Size(142, 31);
+            this.HDDLabel.TabIndex = 20;
+            this.HDDLabel.Text = "HDD:";
+            // 
+            // CPUSpeedDataLabel
+            // 
+            this.CPUSpeedDataLabel.BackColor = System.Drawing.Color.White;
+            this.CPUSpeedDataLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.CPUSpeedDataLabel.Location = new System.Drawing.Point(490, 218);
+            this.CPUSpeedDataLabel.Name = "CPUSpeedDataLabel";
+            this.CPUSpeedDataLabel.Size = new System.Drawing.Size(142, 31);
+            this.CPUSpeedDataLabel.TabIndex = 17;
+            // 
+            // CPUSpeedLabel
+            // 
+            this.CPUSpeedLabel.Location = new System.Drawing.Point(342, 218);
+            this.CPUSpeedLabel.Name = "CPUSpeedLabel";
+            this.CPUSpeedLabel.Size = new System.Drawing.Size(142, 31);
+            this.CPUSpeedLabel.TabIndex = 18;
+            this.CPUSpeedLabel.Text = "CPU Speed:";
+            // 
             // CPUTypeDataLabel
             // 
             this.CPUTypeDataLabel.BackColor = System.Drawing.Color.White;
@@ -435,73 +506,9 @@
             this.MemoryLabel.TabIndex = 7;
             this.MemoryLabel.Text = "Memory:";
             // 
-            // CPUSpeedDataLabel
+            // ProductOpenFileDialog
             // 
-            this.CPUSpeedDataLabel.BackColor = System.Drawing.Color.White;
-            this.CPUSpeedDataLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.CPUSpeedDataLabel.Location = new System.Drawing.Point(490, 218);
-            this.CPUSpeedDataLabel.Name = "CPUSpeedDataLabel";
-            this.CPUSpeedDataLabel.Size = new System.Drawing.Size(142, 31);
-            this.CPUSpeedDataLabel.TabIndex = 17;
-            // 
-            // CPUSpeedLabel
-            // 
-            this.CPUSpeedLabel.Location = new System.Drawing.Point(342, 218);
-            this.CPUSpeedLabel.Name = "CPUSpeedLabel";
-            this.CPUSpeedLabel.Size = new System.Drawing.Size(142, 31);
-            this.CPUSpeedLabel.TabIndex = 18;
-            this.CPUSpeedLabel.Text = "CPU Speed:";
-            // 
-            // HDDDataLabel
-            // 
-            this.HDDDataLabel.BackColor = System.Drawing.Color.White;
-            this.HDDDataLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.HDDDataLabel.Location = new System.Drawing.Point(800, 37);
-            this.HDDDataLabel.Name = "HDDDataLabel";
-            this.HDDDataLabel.Size = new System.Drawing.Size(142, 31);
-            this.HDDDataLabel.TabIndex = 19;
-            // 
-            // HDDLabel
-            // 
-            this.HDDLabel.Location = new System.Drawing.Point(652, 37);
-            this.HDDLabel.Name = "HDDLabel";
-            this.HDDLabel.Size = new System.Drawing.Size(142, 31);
-            this.HDDLabel.TabIndex = 20;
-            this.HDDLabel.Text = "HDD:";
-            // 
-            // GPUTypeDataLabel
-            // 
-            this.GPUTypeDataLabel.BackColor = System.Drawing.Color.White;
-            this.GPUTypeDataLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.GPUTypeDataLabel.Location = new System.Drawing.Point(800, 128);
-            this.GPUTypeDataLabel.Name = "GPUTypeDataLabel";
-            this.GPUTypeDataLabel.Size = new System.Drawing.Size(142, 31);
-            this.GPUTypeDataLabel.TabIndex = 21;
-            // 
-            // GPUTypeLabel
-            // 
-            this.GPUTypeLabel.Location = new System.Drawing.Point(652, 128);
-            this.GPUTypeLabel.Name = "GPUTypeLabel";
-            this.GPUTypeLabel.Size = new System.Drawing.Size(142, 31);
-            this.GPUTypeLabel.TabIndex = 22;
-            this.GPUTypeLabel.Text = "GPU Type:";
-            // 
-            // WebcamDataLabel
-            // 
-            this.WebcamDataLabel.BackColor = System.Drawing.Color.White;
-            this.WebcamDataLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.WebcamDataLabel.Location = new System.Drawing.Point(800, 219);
-            this.WebcamDataLabel.Name = "WebcamDataLabel";
-            this.WebcamDataLabel.Size = new System.Drawing.Size(142, 31);
-            this.WebcamDataLabel.TabIndex = 23;
-            // 
-            // WebcamLabel
-            // 
-            this.WebcamLabel.Location = new System.Drawing.Point(652, 219);
-            this.WebcamLabel.Name = "WebcamLabel";
-            this.WebcamLabel.Size = new System.Drawing.Size(142, 31);
-            this.WebcamLabel.TabIndex = 24;
-            this.WebcamLabel.Text = "Webcam:";
+            this.ProductOpenFileDialog.FileName = "openFileDialog1";
             // 
             // ProductInfoForm
             // 
@@ -527,6 +534,7 @@
             this.Name = "ProductInfoForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Product Information Form";
+            this.Activated += new System.EventHandler(this.ProductInfoForm_Activated);
             this.ProductInfoFormMenuStrip.ResumeLayout(false);
             this.ProductInfoFormMenuStrip.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -584,5 +592,7 @@
         private System.Windows.Forms.Label GPUTypeLabel;
         private System.Windows.Forms.Label HDDDataLabel;
         private System.Windows.Forms.Label HDDLabel;
+        private System.Windows.Forms.OpenFileDialog ProductOpenFileDialog;
+        private System.Windows.Forms.SaveFileDialog ProductSaveFileDialog;
     }
 }
