@@ -104,27 +104,36 @@ namespace COMP123_S2019_Assignment_5_Anurag
                     outputStream.WriteLine(Program.product.screensize);
                     outputStream.WriteLine(Program.product.resolution);
                     outputStream.WriteLine(Program.product.CPU_Class);
-                    outputStream.WriteLine(Program.product.manufacturer);
-                    outputStream.WriteLine(Program.product.manufacturer);
-                    outputStream.WriteLine(Program.product.manufacturer);
-                    outputStream.WriteLine(Program.product.manufacturer);
-                    outputStream.WriteLine(Program.product.manufacturer);
-                    outputStream.WriteLine(Program.product.manufacturer);
-                    outputStream.WriteLine(Program.product.manufacturer);
-                    outputStream.WriteLine(Program.product.manufacturer);
-                    outputStream.WriteLine(Program.product.manufacturer);
-                    outputStream.WriteLine(Program.product.manufacturer);
-                    outputStream.WriteLine(Program.product.manufacturer);
-                    outputStream.WriteLine(Program.product.manufacturer);
-                    outputStream.WriteLine(Program.product.manufacturer);
-                    outputStream.WriteLine(Program.product.manufacturer);
-                    outputStream.WriteLine(Program.product.manufacturer);
-                    outputStream.WriteLine(Program.product.manufacturer);
-                    outputStream.WriteLine(Program.product.manufacturer);
-                    outputStream.WriteLine(Program.product.manufacturer);
-                    outputStream.WriteLine(Program.product.manufacturer);
-                    outputStream.WriteLine(Program.product.manufacturer);
-                    outputStream.WriteLine(Program.product.manufacturer);
+                    outputStream.WriteLine(Program.product.CPU_brand);
+                    outputStream.WriteLine(Program.product.CPU_type);
+                    outputStream.WriteLine(Program.product.CPU_speed);
+                    outputStream.WriteLine(Program.product.CPU_number);
+                    outputStream.WriteLine(Program.product.condition);
+                    outputStream.WriteLine(Program.product.OS);
+                    outputStream.WriteLine(Program.product.platform);
+                    outputStream.WriteLine(Program.product.HDD_size);
+                    outputStream.WriteLine(Program.product.HDD_speed);
+                    outputStream.WriteLine(Program.product.CPU_type);
+                    outputStream.WriteLine(Program.product.optical_drive);
+                    outputStream.WriteLine(Program.product.Audio_type);
+                    outputStream.WriteLine(Program.product.LAN);
+                    outputStream.WriteLine(Program.product.WIFI);
+                    outputStream.WriteLine(Program.product.width);
+                    outputStream.WriteLine(Program.product.height);
+                    outputStream.WriteLine(Program.product.depth);
+                    outputStream.WriteLine(Program.product.weight);
+                    outputStream.WriteLine(Program.product.moust_type);
+                    outputStream.WriteLine(Program.product.power);
+                    outputStream.WriteLine(Program.product.webcam);
+
+                    //cleanup
+                    outputStream.Close();
+                    outputStream.Dispose();
+
+                    //give feedback to the user that the file has been saved
+                    //this is a "modal" form
+                    MessageBox.Show("File Saved...", "Saving File...",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
         }
