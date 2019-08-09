@@ -200,6 +200,15 @@ namespace COMP123_S2019_Assignment_5_Anurag
                 {
                     Debug.WriteLine("ERROR: " + exception.Message);
 
+                    MessageBox.Show("ERROR: " + exception.Message, "ERROR",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                catch(FormatException exception)
+                {
+                    Debug.WriteLine("ERROR: " + exception.Message);
+
+                    MessageBox.Show("ERROR: " + exception.Message + "\n\nPlease select the appropriate file type", "ERROR",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
