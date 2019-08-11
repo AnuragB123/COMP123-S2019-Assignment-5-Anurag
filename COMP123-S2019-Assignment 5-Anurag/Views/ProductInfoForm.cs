@@ -154,7 +154,7 @@ namespace COMP123_S2019_Assignment_5_Anurag
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void openToolStripMenuItem_Click(object sender, EventArgs e)
+        public void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //configure the file dialog
             ProductOpenFileDialog.FileName = "Product.txt";
