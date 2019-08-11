@@ -45,7 +45,7 @@
             this.SystemComponentsGroupBox = new System.Windows.Forms.GroupBox();
             this.LCDSizeDataLabel = new System.Windows.Forms.Label();
             this.LCDSizeLabel = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
+            this.MemoryDataLabel = new System.Windows.Forms.Label();
             this.MemoryLabel = new System.Windows.Forms.Label();
             this.CPUBrandDataLabel = new System.Windows.Forms.Label();
             this.CPUBrandLabel = new System.Windows.Forms.Label();
@@ -65,7 +65,7 @@
             this.OSLabel = new System.Windows.Forms.Label();
             this.ManufactureDataLabel = new System.Windows.Forms.Label();
             this.ManufactureLabel = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.ModelDataLabel = new System.Windows.Forms.Label();
             this.ModelLabel = new System.Windows.Forms.Label();
             this.PlatformDataLabel = new System.Windows.Forms.Label();
             this.PlatformLabel = new System.Windows.Forms.Label();
@@ -121,19 +121,19 @@
             // toolStripSeparator
             // 
             this.toolStripSeparator.Name = "toolStripSeparator";
-            this.toolStripSeparator.Size = new System.Drawing.Size(213, 6);
+            this.toolStripSeparator.Size = new System.Drawing.Size(111, 6);
             // 
             // printToolStripMenuItem
             // 
             this.printToolStripMenuItem.Name = "printToolStripMenuItem";
-            this.printToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.printToolStripMenuItem.Size = new System.Drawing.Size(114, 26);
             this.printToolStripMenuItem.Text = "Print";
             this.printToolStripMenuItem.Click += new System.EventHandler(this.printToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(114, 26);
             this.exitToolStripMenuItem.Text = "E&xit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.Terminate_Application_Click);
             // 
@@ -148,7 +148,7 @@
             // backToolStripMenuItem
             // 
             this.backToolStripMenuItem.Name = "backToolStripMenuItem";
-            this.backToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.backToolStripMenuItem.Size = new System.Drawing.Size(115, 26);
             this.backToolStripMenuItem.Text = "Back";
             this.backToolStripMenuItem.Click += new System.EventHandler(this.Go_Back_To_Product_Click);
             // 
@@ -203,7 +203,7 @@
             // 
             this.SystemComponentsGroupBox.Controls.Add(this.LCDSizeDataLabel);
             this.SystemComponentsGroupBox.Controls.Add(this.LCDSizeLabel);
-            this.SystemComponentsGroupBox.Controls.Add(this.label25);
+            this.SystemComponentsGroupBox.Controls.Add(this.MemoryDataLabel);
             this.SystemComponentsGroupBox.Controls.Add(this.MemoryLabel);
             this.SystemComponentsGroupBox.Controls.Add(this.CPUBrandDataLabel);
             this.SystemComponentsGroupBox.Controls.Add(this.CPUBrandLabel);
@@ -223,7 +223,7 @@
             this.SystemComponentsGroupBox.Controls.Add(this.OSLabel);
             this.SystemComponentsGroupBox.Controls.Add(this.ManufactureDataLabel);
             this.SystemComponentsGroupBox.Controls.Add(this.ManufactureLabel);
-            this.SystemComponentsGroupBox.Controls.Add(this.label5);
+            this.SystemComponentsGroupBox.Controls.Add(this.ModelDataLabel);
             this.SystemComponentsGroupBox.Controls.Add(this.ModelLabel);
             this.SystemComponentsGroupBox.Controls.Add(this.PlatformDataLabel);
             this.SystemComponentsGroupBox.Controls.Add(this.PlatformLabel);
@@ -257,15 +257,15 @@
             this.LCDSizeLabel.TabIndex = 32;
             this.LCDSizeLabel.Text = "LCD Size:";
             // 
-            // label25
+            // MemoryDataLabel
             // 
-            this.label25.BackColor = System.Drawing.Color.White;
-            this.label25.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label25.Location = new System.Drawing.Point(170, 237);
-            this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(117, 29);
-            this.label25.TabIndex = 31;
+            this.MemoryDataLabel.BackColor = System.Drawing.Color.White;
+            this.MemoryDataLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.MemoryDataLabel.Location = new System.Drawing.Point(170, 237);
+            this.MemoryDataLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.MemoryDataLabel.Name = "MemoryDataLabel";
+            this.MemoryDataLabel.Size = new System.Drawing.Size(117, 29);
+            this.MemoryDataLabel.TabIndex = 31;
             // 
             // MemoryLabel
             // 
@@ -447,15 +447,15 @@
             this.ManufactureLabel.TabIndex = 12;
             this.ManufactureLabel.Text = "Manufacture:";
             // 
-            // label5
+            // ModelDataLabel
             // 
-            this.label5.BackColor = System.Drawing.Color.White;
-            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label5.Location = new System.Drawing.Point(648, 105);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(143, 29);
-            this.label5.TabIndex = 11;
+            this.ModelDataLabel.BackColor = System.Drawing.Color.White;
+            this.ModelDataLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ModelDataLabel.Location = new System.Drawing.Point(648, 105);
+            this.ModelDataLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.ModelDataLabel.Name = "ModelDataLabel";
+            this.ModelDataLabel.Size = new System.Drawing.Size(143, 29);
+            this.ModelDataLabel.TabIndex = 11;
             // 
             // ModelLabel
             // 
@@ -597,6 +597,7 @@
             this.Name = "OrderForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Complete Your Order";
+            this.Activated += new System.EventHandler(this.OrderForm_Activated);
             ((System.ComponentModel.ISupportInitialize)(this.LaptopImagePictureBox)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -627,7 +628,7 @@
         private System.Windows.Forms.Label PriceLabel;
         private System.Windows.Forms.Label LCDSizeDataLabel;
         private System.Windows.Forms.Label LCDSizeLabel;
-        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label MemoryDataLabel;
         private System.Windows.Forms.Label MemoryLabel;
         private System.Windows.Forms.Label CPUBrandDataLabel;
         private System.Windows.Forms.Label CPUBrandLabel;
@@ -647,7 +648,7 @@
         private System.Windows.Forms.Label OSLabel;
         private System.Windows.Forms.Label ManufactureDataLabel;
         private System.Windows.Forms.Label ManufactureLabel;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label ModelDataLabel;
         private System.Windows.Forms.Label ModelLabel;
         private System.Windows.Forms.Label PlatformDataLabel;
         private System.Windows.Forms.Label PlatformLabel;

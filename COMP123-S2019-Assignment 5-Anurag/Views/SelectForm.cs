@@ -50,12 +50,17 @@ namespace COMP123_S2019_Assignment_5_Anurag
         {
             // TODO: This line of code loads data into the 'dollarComputersDataSet.products' table. You can move, or remove it, as needed.
             this.productsTableAdapter.Fill(this.dollarComputersDataSet.products);
-
+            NextButton.Enabled = false;
+            if (ProductsDataGridView.SelectedRows.Count > 0)
+            {
+                NextButton.Enabled = true;
+            }
 
         }
 
         private void ComputersDataGridView_SelectionChanged(object sender, EventArgs e)
         {
+            
             //local variables that are used as alias
             var currentCell = ProductsDataGridView.CurrentCell;
             var rowIndex = ProductsDataGridView.CurrentCell.RowIndex;
@@ -75,7 +80,7 @@ namespace COMP123_S2019_Assignment_5_Anurag
             YourSelectionTextBox.Text = outputString;
 
             Program.product.productID = short.Parse(cells[0].Value.ToString());
-            Program.product.cost = decimal.Parse(cells[1].Value.ToString());
+            Program.product.cost = Math.Round(decimal.Parse(cells[1].Value.ToString()));
             Program.product.manufacturer = cells[2].Value.ToString();
             Program.product.model = cells[3].Value.ToString();
             Program.product.RAM_type = cells[4].Value.ToString();
@@ -93,7 +98,7 @@ namespace COMP123_S2019_Assignment_5_Anurag
             Program.product.platform = cells[16].Value.ToString();
             Program.product.HDD_size = cells[17].Value.ToString();
             Program.product.HDD_speed = cells[18].Value.ToString();
-            Program.product.CPU_type = cells[19].Value.ToString();
+            Program.product.GPU_Type = cells[19].Value.ToString();
             Program.product.optical_drive = cells[20].Value.ToString();
             Program.product.Audio_type = cells[21].Value.ToString();
             Program.product.LAN = cells[22].Value.ToString();

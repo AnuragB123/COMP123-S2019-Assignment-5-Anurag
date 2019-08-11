@@ -142,7 +142,7 @@ namespace COMP123_S2019_Assignment_5_Anurag
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //configure the file dialog
-            ProductOpenFileDialog.FileName = "Student.txt";
+            ProductOpenFileDialog.FileName = "Product.txt";
             ProductOpenFileDialog.InitialDirectory = Directory.GetCurrentDirectory();
             ProductOpenFileDialog.Filter = "Text Files (*.txt)|*.txt| All Files (*.*)|*.*";
 
@@ -173,7 +173,7 @@ namespace COMP123_S2019_Assignment_5_Anurag
                         Program.product.CPU_number = inputStream.ReadLine();
                         Program.product.condition = inputStream.ReadLine();
                         Program.product.OS = inputStream.ReadLine();
-                       `Program.product.platform = inputStream.ReadLine();
+                        Program.product.platform = inputStream.ReadLine();
                         Program.product.HDD_size = inputStream.ReadLine();
                         Program.product.HDD_speed = inputStream.ReadLine();
                         Program.product.CPU_type = inputStream.ReadLine();

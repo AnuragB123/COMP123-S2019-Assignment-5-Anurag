@@ -60,5 +60,30 @@ namespace COMP123_S2019_Assignment_5_Anurag
         {
             MessageBox.Show("Your Selection is printing!");
         }
+
+        private void OrderForm_Activated(object sender, EventArgs e)
+        {
+            ConditionDataLabel.Text = Program.product.condition;
+            ManufactureDataLabel.Text = Program.product.manufacturer;
+            PlatformDataLabel.Text = Program.product.platform;
+            ModelDataLabel.Text = Program.product.model;
+            LCDSizeDataLabel.Text = Program.product.screensize;
+            MemoryDataLabel.Text = Program.product.RAM_size;
+            CPUBrandDataLabel.Text = Program.product.CPU_brand;
+            CPUTypeDataLabel.Text = Program.product.CPU_type;
+            CPUNumberDataLabel.Text = Program.product.CPU_number;
+            CPUSpeedDataLabel.Text = Program.product.CPU_speed;
+            HDDDataLabel.Text = Program.product.HDD_size;
+            GPUTypeDataLabel.Text = Program.product.GPU_Type;
+            WebcamDataLabel.Text = Program.product.webcam;
+            OSDataLabel.Text = Program.product.OS;
+            PriceDataLabel.Text = "$"+Program.product.cost.ToString();
+            double price = double.Parse(Program.product.cost.ToString());
+            double salesTax = 0.13 * price;
+            SalesTaxDataLabel.Text = "$" + price.ToString();
+            double totalPrice = price + salesTax;
+            TotalDataLabel.Text = "$"+Math.Round(totalPrice, 2).ToString();
+
+        }
     }
 }
