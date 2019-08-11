@@ -73,6 +73,7 @@
             this.OpenSavedOrderButton.TabIndex = 3;
             this.OpenSavedOrderButton.Text = "Open a Saved Order";
             this.OpenSavedOrderButton.UseVisualStyleBackColor = true;
+            this.OpenSavedOrderButton.Click += new System.EventHandler(this.OpenSavedOrderButton_Click);
             // 
             // ExitButton
             // 
@@ -96,7 +97,7 @@
             this.Controls.Add(this.IconPictureBox);
             this.Controls.Add(this.OrderLabel);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.Margin = new System.Windows.Forms.Padding(7);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "StartForm";

@@ -46,11 +46,18 @@ namespace COMP123_S2019_Assignment_5_Anurag
             this.Hide();
         }
 
+        /// <summary>
+        /// This is the event handler when the Select Form is loaded
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SelectForm_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'dollarComputersDataSet.products' table. You can move, or remove it, as needed.
             this.productsTableAdapter.Fill(this.dollarComputersDataSet.products);
+            //At the begginning, the Next Button will be disabled
             NextButton.Enabled = false;
+            //If a row is selected, then the next Button is enabled
             if (ProductsDataGridView.SelectedRows.Count > 0)
             {
                 NextButton.Enabled = true;
@@ -58,9 +65,13 @@ namespace COMP123_S2019_Assignment_5_Anurag
 
         }
 
+        /// <summary>
+        /// This is the event handler when user selects a row or another row in the dat grid view
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ComputersDataGridView_SelectionChanged(object sender, EventArgs e)
         {
-            
             //local variables that are used as alias
             var currentCell = ProductsDataGridView.CurrentCell;
             var rowIndex = ProductsDataGridView.CurrentCell.RowIndex;
@@ -69,7 +80,7 @@ namespace COMP123_S2019_Assignment_5_Anurag
             var cells = currentRow.Cells;
 
             currentRow.Selected = true;
-
+            
             string outputString = string.Empty;
 
             for (int index = 1; index < 4; index++)
@@ -110,7 +121,6 @@ namespace COMP123_S2019_Assignment_5_Anurag
             Program.product.moust_type = cells[28].Value.ToString();
             Program.product.power = cells[29].Value.ToString();
             Program.product.webcam = cells[30].Value.ToString();
-
         }
     }
 }

@@ -59,6 +59,11 @@ namespace COMP123_S2019_Assignment_5_Anurag
             this.Hide();
         }
 
+        /// <summary>
+        /// This is the event handler when the Product Info Form is Activated
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ProductInfoForm_Activated(object sender, EventArgs e)
         {
             ProductIDDataLabel.Text = Program.product.productID.ToString();
@@ -79,6 +84,11 @@ namespace COMP123_S2019_Assignment_5_Anurag
             WebcamDataLabel.Text = Program.product.webcam.ToString();
         }
 
+        /// <summary>
+        /// This is the event handler when the user clicks the save tool menu item
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // configure the file dialog
@@ -139,6 +149,11 @@ namespace COMP123_S2019_Assignment_5_Anurag
             }
         }
 
+        /// <summary>
+        /// This is the event handler when the user clicks the open tool menu item
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //configure the file dialog

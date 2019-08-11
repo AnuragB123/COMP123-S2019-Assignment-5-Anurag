@@ -44,5 +44,16 @@ namespace COMP123_S2019_Assignment_5_Anurag
             Program.selectForm.Show();
             this.Hide();
         }
+
+        /// <summary>
+        /// This is the even handler when the user clicks a Open Saved Order which shows Product Info Form and opens the file dialog of the form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void OpenSavedOrderButton_Click(object sender, EventArgs e)
+        {
+            //Program.productInfoForm.Show();
+            //this.Hide();
+        }
     }
 }

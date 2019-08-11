@@ -56,11 +56,21 @@ namespace COMP123_S2019_Assignment_5_Anurag
             Application.Exit();
         }
 
+        /// <summary>
+        /// This is the event handler when user selects the Print Tool option on the Menu Item list
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void printToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Your Selection is printing!");
         }
 
+        /// <summary>
+        /// This is the event handler when the form is opened or activated
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void OrderForm_Activated(object sender, EventArgs e)
         {
             ConditionDataLabel.Text = Program.product.condition;
@@ -86,6 +96,11 @@ namespace COMP123_S2019_Assignment_5_Anurag
 
         }
 
+        /// <summary>
+        /// This is the even handler when the user clicks the Finish Button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FinishButton_Click(object sender, EventArgs e)
         {
             string message = "Thank you for your business\nYour order will process in 7-10 business days";
@@ -94,8 +109,6 @@ namespace COMP123_S2019_Assignment_5_Anurag
             {
                 Application.Exit();
             }
-            
-
         }
 
     }
