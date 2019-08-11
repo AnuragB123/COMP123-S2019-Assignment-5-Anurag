@@ -85,5 +85,18 @@ namespace COMP123_S2019_Assignment_5_Anurag
             TotalDataLabel.Text = "$"+Math.Round(totalPrice, 2).ToString();
 
         }
+
+        private void FinishButton_Click(object sender, EventArgs e)
+        {
+            string message = "Thank you for your business\nYour order will process in 7-10 business days";
+            DialogResult dialog = MessageBox.Show(message, "Ending message:", MessageBoxButtons.OK);
+            if (dialog == DialogResult.OK)
+            {
+                Application.Exit();
+            }
+            
+
+        }
+
     }
 }
