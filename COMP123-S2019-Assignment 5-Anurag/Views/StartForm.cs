@@ -53,6 +53,7 @@ namespace COMP123_S2019_Assignment_5_Anurag
         private void OpenSavedOrderButton_Click(object sender, EventArgs e)
         {
             Program.productInfoForm.openToolStripMenuItem_Click(sender, e);
+            this.Hide();
         }
     }
 }
