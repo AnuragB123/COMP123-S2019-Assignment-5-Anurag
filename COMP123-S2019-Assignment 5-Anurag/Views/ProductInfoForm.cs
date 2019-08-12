@@ -226,11 +226,14 @@ namespace COMP123_S2019_Assignment_5_Anurag.Views
             NextButton.Enabled = true;
         }
 
+        /// <summary>
+        /// This is thr event handler when Product Info Form is loaded
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ProductInfoForm_Load(object sender, EventArgs e)
         {
             NextButton.Enabled = false;
         }
-
-        
     }
 }

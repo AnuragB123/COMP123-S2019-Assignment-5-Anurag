@@ -89,7 +89,6 @@ namespace COMP123_S2019_Assignment_5_Anurag.Views
             SalesTaxDataLabel.Text = "$" + price.ToString();
             double totalPrice = price + salesTax;
             TotalDataLabel.Text = "$" + Math.Round(totalPrice, 2).ToString();
-
         }
     }
 }
