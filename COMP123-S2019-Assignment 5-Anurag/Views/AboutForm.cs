@@ -6,12 +6,8 @@ using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-/// <summary>
-/// Name: Anurag Bhattacharya
-/// Lab 12 - Assignment 5 UI
-/// 301050634
-/// </summary>
-namespace COMP123_S2019_Assignment_5_Anurag
+
+namespace COMP123_S2019_Assignment_5_Anurag.Views
 {
     public partial class AboutForm : Form
     {

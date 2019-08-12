@@ -7,13 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using COMP123_S2019_Assignment_5_Anurag.Data;
-/// <summary>
-/// Name: Anurag Bhattacharya
-/// Lab 12 - Assignment 5 UI
-/// 301050634
-/// </summary>
-namespace COMP123_S2019_Assignment_5_Anurag
+
+namespace COMP123_S2019_Assignment_5_Anurag.Views
 {
     public partial class SelectForm : Form
     {
@@ -24,7 +19,7 @@ namespace COMP123_S2019_Assignment_5_Anurag
         {
             InitializeComponent();
         }
-        
+
         /// <summary>
         /// This is an event handler when the user clicks Cancel Button to terminate the application
         /// </summary>
@@ -80,7 +75,7 @@ namespace COMP123_S2019_Assignment_5_Anurag
             var cells = currentRow.Cells;
 
             currentRow.Selected = true;
-            
+
             string outputString = string.Empty;
 
             for (int index = 1; index < 4; index++)
@@ -122,5 +117,7 @@ namespace COMP123_S2019_Assignment_5_Anurag
             Program.product.power = cells[29].Value.ToString();
             Program.product.webcam = cells[30].Value.ToString();
         }
+
+        
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace COMP123_S2019_Assignment_5_Anurag
+﻿namespace COMP123_S2019_Assignment_5_Anurag.Views
 {
     partial class AboutForm
     {
@@ -88,7 +88,7 @@
             this.labelProductName.Name = "labelProductName";
             this.labelProductName.Size = new System.Drawing.Size(361, 21);
             this.labelProductName.TabIndex = 19;
-            this.labelProductName.Text = "Product Name";
+            this.labelProductName.Text = "Anurag Bhattacharya";
             this.labelProductName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // labelVersion
@@ -100,7 +100,7 @@
             this.labelVersion.Name = "labelVersion";
             this.labelVersion.Size = new System.Drawing.Size(361, 21);
             this.labelVersion.TabIndex = 0;
-            this.labelVersion.Text = "Version";
+            this.labelVersion.Text = "Final Version";
             this.labelVersion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // labelCopyright
@@ -112,7 +112,7 @@
             this.labelCopyright.Name = "labelCopyright";
             this.labelCopyright.Size = new System.Drawing.Size(361, 21);
             this.labelCopyright.TabIndex = 21;
-            this.labelCopyright.Text = "Copyright";
+            this.labelCopyright.Text = "Contact us at 647-301-1119!";
             this.labelCopyright.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // labelCompanyName
@@ -124,7 +124,7 @@
             this.labelCompanyName.Name = "labelCompanyName";
             this.labelCompanyName.Size = new System.Drawing.Size(361, 21);
             this.labelCompanyName.TabIndex = 22;
-            this.labelCompanyName.Text = "Company Name";
+            this.labelCompanyName.Text = "Dollar Computers";
             this.labelCompanyName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // textBoxDescription
@@ -139,7 +139,7 @@
             this.textBoxDescription.Size = new System.Drawing.Size(361, 155);
             this.textBoxDescription.TabIndex = 23;
             this.textBoxDescription.TabStop = false;
-            this.textBoxDescription.Text = "Description";
+            this.textBoxDescription.Text = "Description: www.dollarComputers.com";
             // 
             // okButton
             // 

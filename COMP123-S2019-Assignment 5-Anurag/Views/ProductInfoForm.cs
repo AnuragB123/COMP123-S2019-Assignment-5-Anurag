@@ -9,12 +9,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-/// <summary>
-/// Name: Anurag Bhattacharya
-/// Lab 12 - Assignment 5 UI
-/// 301050634
-/// </summary>
-namespace COMP123_S2019_Assignment_5_Anurag
+
+namespace COMP123_S2019_Assignment_5_Anurag.Views
 {
     public partial class ProductInfoForm : Form
     {
@@ -25,7 +21,7 @@ namespace COMP123_S2019_Assignment_5_Anurag
         {
             InitializeComponent();
         }
-        
+
         /// <summary>
         /// This is the shared event handler when the User clicks the Exit Menu Selection or Cancel Button to terminate the application
         /// </summary>
@@ -82,6 +78,7 @@ namespace COMP123_S2019_Assignment_5_Anurag
             CPUTypeDataLabel.Text = Program.product.CPU_type.ToString();
             CPUSpeedDataLabel.Text = Program.product.CPU_speed.ToString();
             WebcamDataLabel.Text = Program.product.webcam.ToString();
+            NextButton.Enabled = true;
         }
 
         /// <summary>
@@ -124,7 +121,7 @@ namespace COMP123_S2019_Assignment_5_Anurag
                     outputStream.WriteLine(Program.product.platform);
                     outputStream.WriteLine(Program.product.HDD_size);
                     outputStream.WriteLine(Program.product.HDD_speed);
-                    outputStream.WriteLine(Program.product.CPU_type);
+                    outputStream.WriteLine(Program.product.GPU_Type);
                     outputStream.WriteLine(Program.product.optical_drive);
                     outputStream.WriteLine(Program.product.Audio_type);
                     outputStream.WriteLine(Program.product.LAN);
@@ -163,7 +160,7 @@ namespace COMP123_S2019_Assignment_5_Anurag
 
             // open the file dialog
             var result = ProductOpenFileDialog.ShowDialog();
-            if(result != DialogResult.Cancel)
+            if (result != DialogResult.Cancel)
             {
                 try
                 {
@@ -191,7 +188,7 @@ namespace COMP123_S2019_Assignment_5_Anurag
                         Program.product.platform = inputStream.ReadLine();
                         Program.product.HDD_size = inputStream.ReadLine();
                         Program.product.HDD_speed = inputStream.ReadLine();
-                        Program.product.CPU_type = inputStream.ReadLine();
+                        Program.product.GPU_Type = inputStream.ReadLine();
                         Program.product.optical_drive = inputStream.ReadLine();
                         Program.product.Audio_type = inputStream.ReadLine();
                         Program.product.LAN = inputStream.ReadLine();
@@ -218,7 +215,7 @@ namespace COMP123_S2019_Assignment_5_Anurag
                     MessageBox.Show("ERROR: " + exception.Message, "ERROR",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                catch(FormatException exception)
+                catch (FormatException exception)
                 {
                     Debug.WriteLine("ERROR: " + exception.Message);
 
@@ -226,6 +223,14 @@ namespace COMP123_S2019_Assignment_5_Anurag
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+            NextButton.Enabled = true;
         }
+
+        private void ProductInfoForm_Load(object sender, EventArgs e)
+        {
+            NextButton.Enabled = false;
+        }
+
+        
     }
 }

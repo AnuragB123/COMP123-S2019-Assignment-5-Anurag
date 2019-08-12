@@ -5,13 +5,13 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("COMP123-S2019-Assignment 5-Anurag")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Anurag Bhattacharya")]
+[assembly: AssemblyDescription("Final Version")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("HP Inc.")]
-[assembly: AssemblyProduct("COMP123-S2019-Assignment 5-Anurag")]
+[assembly: AssemblyProduct("www.dollarComputers.com")]
 [assembly: AssemblyCopyright("Copyright © HP Inc. 2019")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyTrademark("647-301-1119")]
 [assembly: AssemblyCulture("")]
 
 // Setting ComVisible to false makes the types in this assembly not visible

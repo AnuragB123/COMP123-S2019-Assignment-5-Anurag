@@ -1,4 +1,5 @@
 ﻿using COMP123_S2019_Assignment_5_Anurag.Data;
+using COMP123_S2019_Assignment_5_Anurag.Views;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,14 +14,16 @@ namespace COMP123_S2019_Assignment_5_Anurag
 {
     public static class Program
     {
+        //This is the data
+        public static Product product { get; set; }
         //These are all the forms in the application
-        public static SplashScreenForm splashScreenForm;
-        public static StartForm startForm;
-        public static SelectForm selectForm;
-        public static ProductInfoForm productInfoForm;
-        public static OrderForm orderForm;
-        public static AboutForm aboutForm;
-        public static Product product;
+        public static SplashScreenForm splashScreenForm { get; set; }
+        public static StartForm startForm { get; set; }
+        public static SelectForm selectForm { get; set; }
+        public static ProductInfoForm productInfoForm { get; set; }
+        public static OrderForm orderForm { get; set; }
+        public static AboutForm aboutForm { get; set; }
+        
 
         /// <summary>
         /// The main entry point for the application.
@@ -30,6 +33,7 @@ namespace COMP123_S2019_Assignment_5_Anurag
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            product = new Product();
             //This intializes each of the forms
             splashScreenForm = new SplashScreenForm();
             startForm = new StartForm();
@@ -37,7 +41,7 @@ namespace COMP123_S2019_Assignment_5_Anurag
             productInfoForm = new ProductInfoForm();
             orderForm = new OrderForm();
             aboutForm = new AboutForm();
-            product = new Product();
+
             //Runs the Splash Screen First
             Application.Run(new SplashScreenForm());
         }

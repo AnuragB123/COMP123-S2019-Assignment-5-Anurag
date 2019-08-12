@@ -7,12 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-/// <summary>
-/// Name: Anurag Bhattacharya
-/// Lab 12 - Assignment 5 UI
-/// 301050634
-/// </summary>
-namespace COMP123_S2019_Assignment_5_Anurag
+
+namespace COMP123_S2019_Assignment_5_Anurag.Views
 {
     public partial class OrderForm : Form
     {
@@ -31,15 +27,15 @@ namespace COMP123_S2019_Assignment_5_Anurag
         /// <param name="e"></param>
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Program.aboutForm.Show();
+            Program.aboutForm.ShowDialog();
         }
 
-       /// <summary>
-       /// This is the shared event handler when the user clicks Back Menu Selection or Back Button to select another product from 
-       /// Select Form
-       /// </summary>
-       /// <param name="sender"></param>
-       /// <param name="e"></param>
+        /// <summary>
+        /// This is the shared event handler when the user clicks Back Menu Selection or Back Button to select another product from 
+        /// Select Form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Go_Back_To_Product_Click(object sender, EventArgs e)
         {
             Program.productInfoForm.Show();
@@ -87,29 +83,13 @@ namespace COMP123_S2019_Assignment_5_Anurag
             GPUTypeDataLabel.Text = Program.product.GPU_Type;
             WebcamDataLabel.Text = Program.product.webcam;
             OSDataLabel.Text = Program.product.OS;
-            PriceDataLabel.Text = "$"+Program.product.cost.ToString();
+            PriceDataLabel.Text = "$" + Program.product.cost.ToString();
             double price = double.Parse(Program.product.cost.ToString());
             double salesTax = 0.13 * price;
             SalesTaxDataLabel.Text = "$" + price.ToString();
             double totalPrice = price + salesTax;
-            TotalDataLabel.Text = "$"+Math.Round(totalPrice, 2).ToString();
+            TotalDataLabel.Text = "$" + Math.Round(totalPrice, 2).ToString();
 
         }
-
-        /// <summary>
-        /// This is the even handler when the user clicks the Finish Button
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void FinishButton_Click(object sender, EventArgs e)
-        {
-            string message = "Thank you for your business\nYour order will process in 7-10 business days";
-            DialogResult dialog = MessageBox.Show(message, "Ending message:", MessageBoxButtons.OK);
-            if (dialog == DialogResult.OK)
-            {
-                Application.Exit();
-            }
-        }
-
     }
 }
